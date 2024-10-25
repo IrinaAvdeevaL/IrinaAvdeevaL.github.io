@@ -1,7 +1,27 @@
 <html>
   <head>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
+     
+ 
   <meta charset="utf-8">
   <title>Форма</title>
   <style> a {color:white;}</style>
@@ -54,14 +74,82 @@ body {
     </div>
   </nav>
   <div class="container">
+    
     <form action="handler.php">
   <p><b>Как ваше настроение?</b></p>
-  <p><input type="radio" name="answer" value="a1">Норм<Br>
-  <input type="radio" name="answer" value="a2">Потянет<Br>
-  <input type="radio" name="answer" value="a3">Прекрасное</p>
+  <p>
+ 
+  <input id="norm" type="radio" name="answer" value="a1" checked>
+  <label for="norm"> Норм </label><Br>
+  
+  <input id="pot" type="radio" name="answer" value="a2" checked>
+  <label for="pot"> Потянет </label><Br>
+  
+  <input id="prek" type="radio" name="answer" value="a3" checked>
+  <label for="prek"> Прекрасное </label><Br>
+  
+  </p>
   <p><input type="submit"></p>
  </form>
+
+    
+    <h1>Энергетическая ценность продуктов питания</h1>
+
+<table id="myTable">
+<thead>
+  <tr>
+    <th>Продукт</th>
+    <th>Белки</th>
+    <th>Жиры</th>
+    <th>Углеводы</th>
+    <th>Ккал</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Хлеб ржаной</td>
+    <td>4,7</td>
+    <td>0,7</td>
+    <td>49,8</td>
+    <td>214</td>
+  </tr>
+  <tr>
+    <td>Молоко</td>
+    <td>2,8</td>
+    <td>3,2</td>
+    <td>4,7</td>
+    <td>58</td>
+  </tr>
+  <tr>
+    <td>Картофель</td>
+    <td>2</td>
+    <td>0,1</td>
+    <td>19,7</td>
+    <td>83</td>
+  </tr>
+  <tr>
+    <td>Свинина</td>
+    <td>11,4</td>
+    <td>49,3</td>
+    <td>9</td>
+    <td>489</td>
+  </tr>
+  <tbody>
+</table>
  </div>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+ 
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script>
+
+    let table = new DataTable('#myTable');
+    $( "#datepicker" ).datepicker();
+    Fancybox.bind(".gallery");
+  //  Fancybox.bind("[data-fancybox]");
+</script>
+
+
     
     <section id="about">
             <div class="container px-4">
