@@ -107,6 +107,20 @@ body {
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required>
         <hr>
+        Дата рождния:
+       <input type="date">
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+ 
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script>
+
+    let table = new DataTable('#myTable');
+    $( "#datepicker" ).datepicker();
+    Fancybox.bind(".gallery");
+  //  Fancybox.bind("[data-fancybox]");
+</script>
+       <hr>
 
         <label for="message">Сообщение:</label>
         <textarea id="message" name="message" rows="4" cols="50"></textarea>
