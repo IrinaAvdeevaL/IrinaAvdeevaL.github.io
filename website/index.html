@@ -88,18 +88,20 @@ body {
   <p>
           <div class="row text-center">
             <div class="col text-white ">
-                <button type="button" class="btn btn-secondary" onclick=' $(".catalog .row div").show() '>Все</button>
-                
-                <button type="button" class="btn btn-danger"
+                 <button type="button" class="btn bg-danger"
                     onclick=' $(".catalog .row div").hide();
                       $(".pr").fadeIn("slow"); '>Горячие блюда</button><!--спрятать все div внутри .row и показать все .bg-primary -->
 
-                <button type="button" class="btn btn-primary"
+                <button type="button" class="btn bg-primary"
                     onclick=' $(".catalog .row div").hide();
                       $(".sc").fadeIn("slow"); '>Холодные блюда</button><!--спрятать все div внутри .row и показать все .bg-success -->
-                <button type="button" class="btn btn-success"
+                <button type="button" class="btn bg-warning"
                     onclick=' $(".catalog .row div").hide();
                       $(".dg").fadeIn("slow"); '>Закуски</button><!--спрятать все div внутри .row и показать все .bg-danger -->
+                <button type="button" class="btn bg-info"
+                    onclick=' $(".catalog .row div").hide();
+                      $(".napit").fadeIn("slow"); '>Напитки</button><!--спрятать все div внутри .row и показать все .napit -->    
+                 <button type="button" class="btn bg-secondary" onclick=' $(".catalog .row div").show() '>Все</button>
             </div>
         </div>
     </div>
